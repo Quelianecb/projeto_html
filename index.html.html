@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+Interface de FRONTEND <-> BACKEND
+-->
+<html>
+    <head>
+        <title>CADASTRO DE CLIENTE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+
+            <form method="POST" name="formcli" action="cadcli.php">
+                <h1>Cadastro de Clientes</h1>
+                <table width="100%">
+                    <tr>
+                        <th width="18%">Nome</th>
+                        <td width="82%">
+                            <input type="text" name="nome">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th width="18%">CPF</th>
+                        <td width="82%">
+                            <input type="text" name="cpf" maxlength="14">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>RG</th>
+                        <td>
+                            <input type="text" name="rg">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Data Nasc.</th>
+                        <td>
+                            <input type="date" name="data">                    
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Estado Civil</th>
+                        <td>
+                            <select name="estadocivil">
+                                <option value="casado(a)">Casado(a)</option>
+                                <option value="solteiro(a)">Solteiro(a)</option>
+                                <option value="divorciado(a)">Divorciado(a)</option> 
+                                <option value="viuvo(a)">Viuvo(a)</option>                                     
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Telefone</th>
+                        <td>
+                            <input type="tel" name="telefone">                    
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>E-mail</th>
+                        <td>
+                            <input type="email" name="telefone">                    
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Logradouro</th>
+                        <td>
+                            <input type="text" name="logradouro">                    
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Quadra</th>
+                        <td>
+                            <input type="text" name="quadra">                    
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Número</th>
+                        <td>
+                            <input type="number" name="numero">                    
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Apto</th>
+                        <td>
+                            <input type="number" name="apto">                    
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Bairro</th>
+                        <td>
+                            <input type="text" name="bairro">                    
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Cidade</th>
+                        <td>
+                            <input type="text" name="cidade">                    
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <th>Estado:</th>
+                        <td><select name="estado">
+                                <option>Selecione...</option>
+                                <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="ES">ES</option>
+                                <option value="DF">DF</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PR">PR</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>
+                            </select>
+                    </tr>
+
+                    <tr>
+                        <th>CEP</th>
+                        <td>
+                            <input type="text" name="cep">                    
+                        </td>
+                    </tr>
+                    <!--
+                    Botões de CADASTRAR e LIMPAR
+                    -->
+                    <tr>
+                        <td colspan="2">
+                            <p>
+                                <input name="cadastrar" type="submit"value="Cadastrar" /> 
+
+                                <input name="limpar" type="reset" value="Limpar" />
+                            </p>
+                    </tr>
+
+                </table>
+
+
+            </form>
+
+        </div>
+    </body>
+</html>
