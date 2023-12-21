@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image:linear-gradient(45deg, rgb(20, 147, 220), rgb(17, 54, 71));/*cor em degrade*/
+        }
+        .box{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);/*fica no centro o formulario*/
+            background-color:rgba(0, 0, 0, 0.5) ;/*cor de fundo da tabela */
+            padding: 15px;
+            border-radius: 15px;
+            width: 50%;
+
+        }
+        fieldset{
+            border: 3px solid dodgerblue;/*borda com a cor*/
+        }
+        legend{
+            border: 1px solid dodgerblue;/* cor na borda */
+            padding: 15px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 8px;
+
+        }
+        .inputBox{
+            position: relative;
+
+        }
+        .inputUser{
+            background:none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color:white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .labelinput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+
+        }
+        .inputUser:focus ~.labelinput,
+        .inputUser:valid~.labelinput{/*aqui que acontece a açáo da palavra subir*/
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        #idata{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;/*borda arrendondada*/
+            outline: none;
+            font-size: 15px;
+        }
+        #submit{
+            background-image: linear-gradient(to right,rgb(0,92,197),rgb(90, 20, 220));
+            width: 100%;/*largura */
+            padding: 15px;/*altura*/
+            color: white;/*cor da palavra*/
+            cursor: pointer;/*quando vira uma mão no cursor*/
+            border-radius: 10px;/*arrendondamento na borda*/
+            font-size: 15px;/*taanho da palavra*/
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                
+                <legend><b>Formulário de clientes</b></legend>
+
+                <div class="inputBox">
+                    <input type="text" name="nome" id="inome" class="inputUser" required>
+                    <label for="inome" class="labelinput">Nome completo</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="iemail" class="inputUser" required>
+                    <label for="iemail"class="labelinput">E-mail</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="itelefone" class="inputUser" required>
+                    <label for="itelefone"class="labelinput">Telefone</label>
+                </div>
+                <br>
+                <p>Sexo :</p>
+                <input type="radio" name="genero" id="ifeminino" value="feminino" required>
+                <label for="ifeminino">Feminino </label>
+                <input type="radio" name="genero" id="imasculino" value="masculino"required>
+                <label for="imasculino">Masculino</label>
+                <input type="radio" name="genero" id="ioutro" value="outro" required>
+                <label for="ioutro">Outros</label>
+                <div class="inputBox">
+                    <br>
+                     <label for="idata">Data de nascimento :</label>
+                    <input type="date" name="data" id="idata" class="inputUser" required>
+                   
+
+                </div> 
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="cidade" id="icidade" class="inputUser" required>
+                    <label for="icidade"class="labelinput">Cidade :</label>
+
+                </div> 
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="estado" id="iestado" class="inputUser" required>
+                    <label for="iestado"class="labelinput">Estado :</label>
+
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="endereço" id="iendereco" class="inputUser" required>
+                    <label for="iendereco"class="labelinput">Endereço :</label>
+
+                </div>  
+                <br>
+                <div class="inputBox">
+                    <input type="password" name="senha" id="isenha" class="inputUser" required>
+                    <label for="isenha" class="labelinput">Crie uma senha :</label>
+                </div>
+                <br>  
+                <input type="submit" name="submit" id="submit">            
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
